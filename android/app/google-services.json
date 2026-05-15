@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "220417592573",
+    "project_id": "quran-a3029",
+    "storage_bucket": "quran-a3029.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220417592573:android:c42fc35777fe5b61aa4294",
+        "android_client_info": {
+          "package_name": "quranjourney.moustafa.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5BVb9fJyH459JAjjJ1SRda67ijiEKIkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
