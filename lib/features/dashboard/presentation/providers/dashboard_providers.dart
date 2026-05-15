@@ -11,7 +11,8 @@ import 'package:quran_journey/features/dashboard/data/models/user_progress.dart'
 import 'package:quran_journey/features/dashboard/data/repositories/dashboard_repository_impl.dart';
 import 'package:quran_journey/features/dashboard/domain/repositories/dashboard_repository.dart';
 
-/// Firestore instance provider - ensures Firebase is initialized before access.
+/// Provider for FirebaseFirestore instance.
+/// Uses late initialization to ensure Firebase is initialized first.
 final firestoreProvider = Provider<FirebaseFirestore>((ref) => FirebaseFirestore.instance);
 
 /// Remote data source provider.

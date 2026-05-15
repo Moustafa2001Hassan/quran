@@ -1,34 +1,21 @@
 ```
 # Dependencies
-.pub/
-.buildlog
-.packages
-
-# Generated plugin build files
-flutter/.pub-cache/
-
-# Firebase
-.firebaserc
-firebase.json
-
-# Build outputs
-build/
 .dart_tool/
+.build/
+.dependencies/
 
-# Environment variables
+# Environment
 .env
 .env.local
-*.env.*
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
+.env.*
 
 # Logs
 *.log
 
-# Temporary files
-*.tmp
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
 ```
