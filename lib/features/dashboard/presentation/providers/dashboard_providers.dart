@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:quran_journey/features/auth/presentation/providers/auth_providers.dart';
 import 'package:quran_journey/features/dashboard/data/datasources/dashboard_remote_data_source.dart';
@@ -9,11 +10,14 @@ import 'package:quran_journey/features/dashboard/data/models/revision_task.dart'
 import 'package:quran_journey/features/dashboard/data/models/user_progress.dart';
 import 'package:quran_journey/features/dashboard/data/repositories/dashboard_repository_impl.dart';
 import 'package:quran_journey/features/dashboard/domain/repositories/dashboard_repository.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
+/// Provider for FirebaseFirestore instance.
+/// Uses late initialization to ensure Firebase is initialized first.
+final firestoreProvider = Provider<FirebaseFirestore>((ref) => FirebaseFirestore.instance);
 
 /// Remote data source provider.
 final dashboardRemoteDataSourceProvider = Provider<DashboardRemoteDataSource>(
-  (ref) => DashboardRemoteDataSourceImpl(FirebaseFirestore.instance),
+  (ref) => DashboardRemoteDataSourceImpl(ref.watch(firestoreProvider)),
 );
 
 /// Repository provider.
